@@ -1,67 +1,82 @@
 '''
 Abimael Reyes
-if y operadores de comparacion
+video 8 - Mi año como un personaje de rol
 '''
 
 '''
-print(5<10) #true
-print(2>20) #false
-print(6<=6) #true
-print(0==0) #true
-'''
 
+tirar 4 dados y quedarnos con la suma de los 3 mejores
 '''
-prom= input
-Si prom > 6 entonces 
-	probado
-sino
-	reprobado
+import random
 
-'''
-'''
-prom = int(input("Escribir promedio: "))
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
+suma=0
 
-if(prom>6):
-	print("Aprobado")
-else:
-	print("Reprobado")
-'''
-'''
-Ingresar 3 notas
-guardar notas
-suma de las notas y calculo de promedio
-Si prom > 6 entonces 
-	probado
-sino
-	reprobado
-'''
-'''
-not1=int(input("Ingrese la nota 1: "))
-not2=int(input("Ingrese la nota 2: "))
-not3=int(input("Ingrese la nota 3: "))
-prom=(not1+not2+not3)/3
+# if(dado1<dado2 and dado1 < dado3 and dado1<dado4): 
+# 	suma= dado2+dado3+dado4
+# if(dado2<dado1 and dado2 < dado3 and dado2<dado4): 
+# 	suma= dado1+dado3+dado4 
+# if(dado3<dado2 and dado3 < dado and dado3<dado4): 
+# 	suma= dado2+dado1+dado4
+# if(dado4<dado2 and dado4 < dado3 and dado4<dado1): 
+# 	suma= dado2+dado3+dado1
 
-print("Su promedio fue: %.2f"%prom )
-if(prom>6):
-	print("Usted ha sido Aprobado")
-else:
-	print("Usted ha sido Reprobado")
-'''
+# print("dado1 %i dado2 %i dado3 %i dado4 %i"%(dado1,dado2,dado3,dado4))
 
-num = int(input("Ingresar nota: "))
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Fuerza: %i"%result)
 
-prom = 0
-cant = 0
-while(num !=0):
-	if(num>=0 and num<=10):
-	 	prom=num+prom
-	 	cant = cant + 1
-	 	num = int(input("Ingresar nota: "))
-	else:
-		num = int(input("Valor fuera del rango, por favor, ingrese nota entre 1 y 10 o 0 para salir: "))
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
 
-# print("prom %.2f y cant %i"% (prom,cant))
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Destreza: %i"%result)
 
-prom_final= prom/cant
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
 
-print("Promedio final %.2f" %prom_final)
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Constitucion: %i"%result)
+
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
+
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Inteligencia: %i"%result)
+
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
+
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Sabiduria: %i"%result)
+
+dado1 = int(random.randint(1,6))
+dado2 = int(random.randint(1,6))
+dado3 = int(random.randint(1,6))
+dado4 = int(random.randint(1,6))
+
+suma = dado1+dado2+dado3+dado4
+menor= min(dado1,dado2,dado3,dado4)
+result=suma-menor
+print("Carisma: %i"%result)
