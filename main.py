@@ -1,41 +1,100 @@
 '''
 Abimael Reyes
-video 10 - for the people by the people
+video 11 - diccionarios
 '''
 
-'''
+# mi_dic={"nombre":"Abi", "edad":28 , "verdad": True}
 
-numeros = [6,5,3,8,4,2,5,4,11]
+## Obtener una key
+# print(mi_dic.get("ape", "Key no valida"))
 
-# for num in numeros:
-# 	print(num)
+## Solo muestra las key del dicionario
+# for value in mi_dic:
+# 	print(value)
 
-# for i in range(10):
-# 	print(i)
+## cambiar el value de una key
+# mi_dic["verdad"]=False
+
+## Consultar por key y value de un disccionario
+# for key, value in mi_dic.items():
+# 	print(key)
+# 	print(value)
+
+## Consultar si existe una key en el diccionario
+# if "edad" in mi_dic:
+# 	print("Hay edad")
+
+# if "apellido" in mi_dic:
+# 	print("Hay apellido")
 # else:
-# 	print("no hay mas numeros")
+# 	print("No hay apellido") 
 
-# tabla2=[(i+1)*2 for i in range(10)]
+# # Agregar elementos a un dic
 
-# print(tabla2)
+# mi_dic["apellido"]="reyes"
+# print(mi_dic)
 
-'''
-curso tiene 30 alumnxs
-cada alumnx tiene 3 notas
-'''
 import random
+import nombres
+
+# noms=nombres.get_nombres(2)
+
+# alumnos = {}
+
+# for nombre in noms:
+# 	notas = [random.randint(1,10) for i in range(3)]
+# 	alumnos[nombre]= notas
+
+
+# promedios = {}
+# for nom in alumnos:
+# 	notas=alumnos[nom]
+# 	suma = 0
+# 	for nota in notas:
+# 		suma = nota + suma
+# 	promedios[nom] = suma/3
+
+# print(promedios)
+
+
 
 cant_alum=int(input("Ingrese la cant de alumnos: "))
+
 cant_notas= int(input("Ingrese la cant. de notas: "))
 
-notas= [random.randint(1,10) for i in range(cant_notas)]
+alum=nombres.get_nombres(cant_alum)
 
-alum=[(i+1) for i in range(cant_alum)]
+alumnos = {}
 
-for num in alum:
+# alum=[(i+1) for i in range(cant_alum)]
+
+for nombre in alum:
 	notas= [random.randint(1,10) for i in range(cant_notas)]
-	prom=0
-	prom=sum(notas)/cant_notas
-	print("El promedio del alumno %i es: %.2f"%(num,prom))
+	alumnos[nombre]=notas
+
+promedios ={}
+
+for nom in alumnos:
+	notas=alumnos[nom]
+	suma=0
+	for nota in notas:
+		suma=nota+suma
+	promedios[nom]=int(round(suma/cant_notas,0))
 else:
-	print("Gracias")
+	print("Este es el resultado: ")
+
+print(promedios)
+
+aprobados={}
+
+for nom in promedios:
+	prom=promedios[nom]
+	if prom >=6:
+		aprobado="aprobado"
+	else:
+		aprobado="reprobado"
+	aprobados[nom]=aprobado
+else:
+	print("listado de alumnos aprobados: ")
+
+print(aprobados)
