@@ -1,35 +1,37 @@
 '''
 Abimael Reyes
-video 12 - funciones
+video 13 - funciones pt2
 '''
 
-def my_func(nombre):
-	print(f"soy {nombre}")
+# *Args y **Kwargs, estos nos dan como resultado una tupla y un diccionario, respectivamente
 
-# my_func("Abi")
+def argumentos(*patitos):
+	print(patitos)
 
-def sumar(a,b):
-	res= a + b
-	return "soy una suma", res
+def kwargunmentos(**kwpatitos):
+	print(kwpatitos)
 
-tipo, resultado = sumar(3,4)
-# print(tipo)
-# print(resultado)
+# argumentos("Hola", 2, "Chao")
 
-import random
+# kwargunmentos(nombre="Hola", edad=2, despedida="Chao")
 
-def get_stats():
-	dados = [random.randint(1,6) for i in range(4)]
-	dados.sort()
-	max_dados=dados[-3:]
-	return sum(max_dados)
+def suma(a,b):
+	return a+b
 
-stats={
-	"str": get_stats(),
-	"des": get_stats(),
-	"int": get_stats(),
-	"wis": get_stats(),
-	"cons": get_stats()
+def res(a,b):
+	return a-b
+
+def mul(a,b):
+	return a*b
+
+def div(a,b):
+	return a/b
+
+op= {
+	"suma": suma,
+	"resta": res,
+	"multi": mul,
+	"divi": div
 }
 
-print(stats)
+print(op["suma"](1,2))
